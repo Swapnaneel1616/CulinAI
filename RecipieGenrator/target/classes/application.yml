@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: RecipieGenrator
+  ai:
+    openai:
+      api-key: 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
