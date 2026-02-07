@@ -1,4 +1,4 @@
-package com.ai.RecipieGenrator;
+package com.ai.RecipieGenrator.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

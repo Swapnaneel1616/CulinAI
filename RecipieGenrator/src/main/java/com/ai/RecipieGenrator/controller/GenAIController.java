@@ -1,10 +1,14 @@
-package com.ai.RecipieGenrator;
+package com.ai.RecipieGenrator.controller;
 
 
+import com.ai.RecipieGenrator.service.ChatService;
+import com.ai.RecipieGenrator.service.ImageService;
+import com.ai.RecipieGenrator.service.RecipeService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.ai.image.ImageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,4 +63,13 @@ public class GenAIController {
                                 @RequestParam(defaultValue = "") String dietaryRestriction) {
         return recipeService.createRecipe(ingredients, cuisine, dietaryRestriction);
     }
+
+    @GetMapping("/getSubstitute")
+    public String getSubstitute(
+            @RequestParam String ingredient,
+            @RequestParam String context
+    ) {
+        return recipeService.getSubstituteForIngredient(ingredient, context);
+    }
+
 }

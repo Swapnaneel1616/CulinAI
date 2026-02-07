@@ -1,4 +1,4 @@
-package com.ai.RecipieGenrator;
+package com.ai.RecipieGenrator.service;
 
 import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.image.ImageResponse;
